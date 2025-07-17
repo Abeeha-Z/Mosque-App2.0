@@ -9,20 +9,30 @@ export const staff = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
-        name: 'Phone_number',
-        title: 'Phone Numer',
-        type: 'number',
+      name: 'phone_number',
+      title: 'Phone Numer',
+      type: 'number',
+      validation: Rule => Rule.required(),
+
       }),
     defineField({
-        name: 'email',
-        title: 'email', 
-        type: 'string',
+      name: 'email',
+      title: 'email', 
+      type: 'string',
+      validation: Rule => Rule.required(),
+
     }),
     defineField({
-        name: 'subject',
-        type: 'string',
+      name: 'subject',
+      type: 'string',
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
+      name: 'profile',
+      type: 'image',
     }),
   ],
 })
