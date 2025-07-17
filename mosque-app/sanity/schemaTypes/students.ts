@@ -1,7 +1,7 @@
 import {defineField, defineType} from 'sanity'
 
 export const students = defineType({
-  name: 'students',
+  name: 'student',
   title: 'Students',
   type: 'document',
   fields: [
@@ -9,22 +9,25 @@ export const students = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
-        name: 'birthday',
-        title: 'Date of Birth',
-        type: 'date',
-      }),
-    defineField({
-        name: 'class',
-        title: 'Class', 
-        type: 'string',
+      name: 'birthday',
+      title: 'Date of Birth',
+      type: 'date',
+      validation: Rule => Rule.required(),
     }),
     defineField({
-        name: 'emergency_contact',
-        title: 'Emergency Contact',
-        type: 'number',
+      name: 'class',
+      title: 'Class', 
+      type: 'string',
+      validation: Rule => Rule.required(),
     }),
-
+    defineField({
+      name: 'emergency_contact',
+      title: 'Emergency Contact',
+      type: 'number',
+      validation: Rule => Rule.required(),
+    }),
   ],
 })

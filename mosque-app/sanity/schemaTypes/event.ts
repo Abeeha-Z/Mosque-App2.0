@@ -9,16 +9,19 @@ export const events = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
-        name: 'date',
-        title: 'Date',
-        type: 'date',
-      }),
-    defineField({
-        name: 'description',
-        title: 'Description', 
-        type: 'string',
+      name: 'date',
+      title: 'Date',
+      type: 'date',
+      validation: Rule => Rule.required(),
     }),
+    defineField({
+      name: 'description',
+      title: 'Description', 
+      type: 'array', //for paragraphs
+      of: [{ type: 'block' }], //for paragraphs
+   }),
   ],
 })
