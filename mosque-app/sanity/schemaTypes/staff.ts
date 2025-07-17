@@ -13,7 +13,7 @@ export const staff = defineType({
     defineField({
         name: 'Phone_number',
         title: 'Phone Numer',
-        type: 'Number',
+        type: 'number',
       }),
     defineField({
         name: 'email',

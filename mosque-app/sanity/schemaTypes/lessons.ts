@@ -13,7 +13,7 @@ export const lessons = defineType({
     defineField({
         name: 'date',
         title: 'Date',
-        type: 'Date',
+        type: 'date',
       }),
     defineField({
         name: 'description',

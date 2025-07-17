@@ -13,7 +13,7 @@ export const students = defineType({
     defineField({
         name: 'birthday',
         title: 'Date of Birth',
-        type: 'Date',
+        type: 'date',
       }),
     defineField({
         name: 'class',
@@ -23,7 +23,7 @@ export const students = defineType({
     defineField({
         name: 'emergency_contact',
         title: 'Emergency Contact',
-        type: 'Number',
+        type: 'number',
     }),
 
   ],
