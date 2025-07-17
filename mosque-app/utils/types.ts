@@ -29,7 +29,7 @@ export interface BlockContent { //this is needed to create paragraphs, bc for th
       //   yes       []
       //   no        [strong]    this will be bolded. 
     }>;
-    markDefs: any[];
-    style: string;
+    markDefs: any[];//holds things like link URLs or custom styles
+    style: string; //how this block should be styled ("normal", "h2", etc.)
   }
   
