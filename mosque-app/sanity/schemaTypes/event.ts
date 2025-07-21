@@ -9,7 +9,7 @@ export const events = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: Rule => Rule.required().min(1),
     }),
     defineField({
       name: 'date',
@@ -23,5 +23,11 @@ export const events = defineType({
       type: 'array', //for paragraphs
       of: [{ type: 'block' }], //for paragraphs
    }),
+   defineField({
+      name: 'rsvp',
+      title: 'RSVP', 
+      type: 'file',
+   }),
+
   ],
 })

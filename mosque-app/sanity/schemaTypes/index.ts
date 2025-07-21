@@ -8,4 +8,5 @@ export const schemaTypes = [
     staff,
     lessons,
     events,
+    settings,
 ]
