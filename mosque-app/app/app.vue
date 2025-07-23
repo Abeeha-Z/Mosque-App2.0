@@ -1,12 +1,16 @@
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
     <nav>
       <RouterView>
-              <RouterLink to="/"></RouterLink>
+              <RouterLink to="/about"></RouterLink>
       </RouterView>
     </nav>
     
   </div>
 </template>
+
+<script>
+
+
+</script>

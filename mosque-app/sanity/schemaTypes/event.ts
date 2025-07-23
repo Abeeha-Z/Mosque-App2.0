@@ -9,7 +9,7 @@ export const events = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation: Rule => Rule.required().min(1),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'date',

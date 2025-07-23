@@ -1,5 +1,16 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
-})
+  modules: ['@nuxtjs/sanity'],
+  runtimeConfig: {
+    sanity: {
+      token: process.env.NUXT_SANITY_TOKEN,
+        projectId: 'zjqxu8zg',
+      dataset: 'production',
+      useCdn: false,
+    // liveContent: {
+    //   browserToken: process.env.NUXT_SANITY_LIVE_BROWSER_TOKEN,
+    //   serverToken: process.env.NUXT_SANITY_LIVE_SERVER_TOKEN,
+    // },
+  },
+  
+}}
+)
