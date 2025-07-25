@@ -1,5 +1,4 @@
 <script setup>
-import {useSanityClient} from '#imports'
 const client = useSanityClient()
 
 const data = await client.fetch(`*[_type == "students"]`)
@@ -8,7 +7,7 @@ const data = await client.fetch(`*[_type == "students"]`)
 
 <template>
 
-    <li v-for="(item) in data"  :data="data">
+    <li v-for="(item) in data"  :key="item._id">
         <h1>{{ item.title }} </h1>
     </li>
 
