@@ -1,23 +1,22 @@
 import {defineField, defineType} from 'sanity'
-export const lessonType = defineType({
-  name: 'lesson',
-  title: 'Lesson',
+export const eventType = defineType({
+  name: 'event',
+  title: 'Event',
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
+      name: 'event',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'level',
-      type: 'string',
+      name: 'date',
+      type: 'datetime',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'slug',
-      type: 'slug',
-      options: {source: 'title'},
+      name: 'location',
+      type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({

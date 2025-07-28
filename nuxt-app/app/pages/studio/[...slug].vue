@@ -8,13 +8,11 @@ const studioContainer = ref()
 onMounted(async () => {
   if (import.meta.client) {
     try {
-      // Add a small delay to ensure DOM is ready
       await new Promise(resolve => setTimeout(resolve, 100))
       
       const { renderStudio } = await import('sanity')
       const { default: config } = await import('../../../studio-app/sanity.config')
       
-      // Validate config exists and has required properties
       if (!config || !config.projectId) {
         throw new Error('Sanity config is invalid or missing projectId')
       }
@@ -25,17 +23,14 @@ onMounted(async () => {
         basePath: config.basePath
       })
       
-      // Ensure container exists
       if (!studioContainer.value) {
         throw new Error('Studio container not found')
       }
       
-      // Use renderStudio with the config
       renderStudio(studioContainer.value, config)
       
     } catch (error) {
       console.error('Failed to load Sanity Studio:', error)
-      // Show error message in the container
       if (studioContainer.value) {
         studioContainer.value.innerHTML = `
           <div style="padding: 20px; color: red;">
@@ -48,9 +43,8 @@ onMounted(async () => {
   }
 })
 
-// Optional: Set page meta
 definePageMeta({
-  layout: false // You might want a clean layout for the Studio
+  layout: false 
 })
 </script>
 

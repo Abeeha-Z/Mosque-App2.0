@@ -11,8 +11,8 @@ const class_levels = [
                     ]
 
 export const staffType = defineType({
-  name: 'post',
-  title: 'Post',
+  name: 'staff',
+  title: 'Staff',
   type: 'document',
   fields: [
             defineField({
@@ -38,7 +38,6 @@ export const staffType = defineType({
             }),
             
 
-            //select subjects and then which classes you teach those sbjects
             defineField({
             name: 'subjects',
             title: 'Subjects',
@@ -53,7 +52,7 @@ export const staffType = defineType({
             defineField({
             name: 'Classes',
             type: 'array',
-            of: [{type: 'string'}], //this creates checkboxes
+            of: [{type: 'string'}], 
             options: {list: class_levels },
             }),
         ],
