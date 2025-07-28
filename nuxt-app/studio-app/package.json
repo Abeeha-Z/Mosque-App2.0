@@ -15,11 +15,7 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/client": "^7.8.1",
     "@sanity/vision": "^4.1.1",
-    "@supabase/supabase-js": "^2.51.0",
-    "primeicons": "^7.0.0",
-    "primevue": "^4.3.6",
     "react": "^19.1",
     "react-dom": "^19.1",
     "sanity": "^4.1.1",
