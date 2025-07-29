@@ -1,8 +1,8 @@
 import { createClient } from '@sanity/client'
 
 export const client = createClient({
-  projectId: 'your-project-id',
-  dataset: 'your-dataset-name',
+  projectId: 'zjqxu8zg',
+  dataset: 'production',
   useCdn: true, // set to `false` to bypass the edge cache
   // Set default headers to be included with all requests
   headers: {

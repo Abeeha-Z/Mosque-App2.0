@@ -15,7 +15,9 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/client": "^7.8.1",
     "@sanity/vision": "^4.1.1",
+    "nuxt": "^4.0.2",
     "react": "^19.1",
     "react-dom": "^19.1",
     "sanity": "^4.1.1",

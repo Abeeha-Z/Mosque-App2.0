@@ -20,10 +20,14 @@
 </template>
 
 <script setup lang='ts'>
+import { reactive } from 'vue'
+import { onMounted } from 'vue'
+
 definePageMeta({
-  layout: 'dashboard'
+      layout: 'dashboard'
 })
-1
+
+
 import {client} from '../../composables/useSanity'
 // import { postType } from '~~/studio-app/schemaTypes/post'
 
