@@ -39,16 +39,16 @@ export const eventType = defineType({
       type: 'file',
     }),
     defineField({
-    name: 'status',
-    type: 'string',
-    options: {
+      name: 'status',
+      type: 'string',
+      options: {
         list: [
-        {title: 'Published', value: 'publish'},
-        {title: 'Draft', value: 'draft'},
-        {title: 'Archived', value: 'archived'},
+          {title: 'Published', value: 'publish'},
+          {title: 'Draft', value: 'draft'},
+          {title: 'Archived', value: 'archived'},
         ],
-        layout: 'radio', 
-    },
-    })
+        layout: 'radio',
+      },
+    }),
   ],
 })

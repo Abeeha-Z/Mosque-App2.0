@@ -15,7 +15,7 @@ export const lessonType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'slug',
+      name: 'slug', //change title to url so its more clean
       type: 'slug',
       options: {source: 'title'},
       validation: (rule) => rule.required(),
@@ -40,16 +40,16 @@ export const lessonType = defineType({
       type: 'file',
     }),
     defineField({
-    name: 'status',
-    type: 'string',
-    options: {
+      name: 'status',
+      type: 'string',
+      options: {
         list: [
-        {title: 'Published', value: 'publish'},
-        {title: 'Draft', value: 'draft'},
-        {title: 'Archived', value: 'archived'},
+          {title: 'Published', value: 'publish'},
+          {title: 'Draft', value: 'draft'},
+          {title: 'Archived', value: 'archived'},
         ],
-        layout: 'radio', 
-    },
-    })
+        layout: 'radio',
+      },
+    }),
   ],
 })
