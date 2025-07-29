@@ -26,7 +26,6 @@
 import { onMounted } from 'vue'
 import type { Post, SanityImage} from '../../types'
 import imageUrlBuilder from '@sanity/image-url'
-import type { NavigationMenuItem } from '@nuxt/ui'
 
 
 
