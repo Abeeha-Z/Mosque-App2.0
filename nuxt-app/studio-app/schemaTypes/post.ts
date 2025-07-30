@@ -26,6 +26,13 @@ export const postType = defineType({
     defineField({
       name: 'image',
       type: 'image',
+
+    }),
+    defineField({
+      name: 'caption',
+type: 'array',
+      of: [{type: 'block'}],
+      validation: (rule) => rule.max(100),      
     }),
     defineField({
       name: 'body',
