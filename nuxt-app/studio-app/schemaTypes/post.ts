@@ -7,7 +7,7 @@ export const postType = defineType({
     defineField({
       name: 'title',
       type: 'string',
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule.required().max(100),
     }),
     defineField({
       name: 'slug',
@@ -31,6 +31,8 @@ export const postType = defineType({
       name: 'body',
       type: 'array',
       of: [{type: 'block'}],
+      validation: (rule) => rule.max(1000),
+
     }),
   ],
 })

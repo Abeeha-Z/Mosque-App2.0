@@ -15,5 +15,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-  basePath: '/studio', 
 })

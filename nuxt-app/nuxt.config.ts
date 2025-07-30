@@ -13,8 +13,14 @@ export default defineNuxtConfig({
       colors: ['primary', 'secondary', 'success', 'info', 'warning', 'error']
     }
   },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
 
-  compatibilityDate: '2025-07-16',
+  compatibilityDate: '2025-07-30',
   runtimeConfig: {
     public: {
       sanityProjectId: 'zjqxu8zg',

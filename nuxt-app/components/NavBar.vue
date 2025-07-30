@@ -1,14 +1,12 @@
 <template>
       <UNavigationMenu orientation="vertical" :items="items" class="data-[orientation=vertical]:w-48" />
-      
-
 </template>
 <script setup lang="ts">
-import type {MenuBar} from '../../nuxt-app/types'
+
 import type { NavigationMenuItem } from '@nuxt/ui'
 import { ref } from 'vue'
 
-const items:MenuBar = ref<NavigationMenuItem[][]>([
+const items = ref<NavigationMenuItem[][]>([
   [
     {
       label: 'Menu',

@@ -1,7 +1,7 @@
 export interface Post {
   _id: string
   _title: string | null
-  body: { _type: string; children?: any[] }[],
+  body: SanityProse,
   image: SanityImage
 }
 
@@ -11,6 +11,22 @@ export type SanityImage = {
     }
 }
 
-export interface MenuBar {
-    
+
+export type PortableTextSpan = {
+  _key: string
+  _type: 'span'
+  marks: string[]
+  text: string
 }
+
+export type PortableTextBlock = {
+  _key: string
+  _type: 'block'
+  children: PortableTextSpan[]
+  markDefs: any[]
+  style: string
+}
+
+
+export type SanityProse = PortableTextBlock[]
+
