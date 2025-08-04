@@ -1,5 +1,7 @@
 <template>
-      <UNavigationMenu orientation="vertical" :items="items" class="data-[orientation=vertical]:w-48" />
+      <NavigationMenu orientation="vertical" :items="items" class="data-[orientation=vertical]:w-48" />
+
+
 </template>
 <script setup lang="ts">
 

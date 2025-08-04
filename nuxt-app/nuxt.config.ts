@@ -13,12 +13,7 @@ export default defineNuxtConfig({
       colors: ['primary', 'secondary', 'success', 'info', 'warning', 'error']
     }
   },
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-    },
-  ],
+   components: true,
 
   compatibilityDate: '2025-07-30',
   runtimeConfig: {
