@@ -1,25 +1,28 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import Aura from '@primeuix/themes/aura';
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ['@nuxt/ui', '@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@primevue/nuxt-module'],
+  
 
   css: ['~/assets/css/main.css'],
-  ui: {
-    prefix: 'user-invalid:',
-    fonts:true,
-    colorMode: true,
-    theme: {
-      colors: ['primary', 'secondary', 'success', 'info', 'warning', 'error']
-    }
-  },
+  
    components: true,
 
   compatibilityDate: '2025-07-30',
+  
   runtimeConfig: {
     public: {
       sanityProjectId: 'zjqxu8zg',
       sanityDataset: 'production'
     }
-  }
-})
+  },
+  primevue: {
+        options: {
+            theme: {
+                preset: Aura
+            }
+        }
+    },
+        })

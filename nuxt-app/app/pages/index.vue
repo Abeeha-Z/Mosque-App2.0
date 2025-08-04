@@ -1,10 +1,7 @@
 <template>
-<div>
-<NavBar />
-
-</div>
-  <div v-if="postObjects" class="post-container bg-blue-50 place-items-center
-">
+<NavBar/>
+s
+  <div v-if="postObjects" class="post-container bg-blue-50 place-items-center">
     <div v-for="(postObject) in postObjects" :key="postObject._id" class="bg-white flex flex-wrap w-1/4 h-1/4 m-4 p-4 content-center drop-shadow-md drop-shadow-black">
             <h1>{{ postObject._title }}</h1>
     <div v-if="postObject.image" class="w-full">
@@ -34,7 +31,6 @@ async function getPosts() {
 
  async function showPosts() {
     postObjects.value = await getPosts()
-    console.log(postObjects)
     return postObjects
 }
 
@@ -55,7 +51,6 @@ return body
 onMounted(()=> {
   showPosts()
 })
-
 
 
   </script>
