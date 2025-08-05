@@ -52,7 +52,7 @@ const menuItems = [
         label: 'Books & Supply Lists',
         description: 'Essential materials required for each level.',
         icon: 'pi pi-bookmark',
-        to: '/academics/books-supply-lists'
+        to: '/academics/supplies'
       }
     ]
   },
@@ -68,10 +68,10 @@ const menuItems = [
         to: '/events/calendar'
       },
       {
-        label: 'RSVP/Volunteer Forms',
-        description: 'Learn how to install and configure Nuxt UI in your application.',
-        icon: 'pi pi-envelope',
-        to: '/events/rsvp-volunteer-forms'
+        label: 'RSVP & Volunteer Forms',
+        description: 'All major events for the school year.',
+        icon: 'pi pi-calendar-clock',
+        to: '/events/eventforms'
       },
       {
         label: 'Vendors',
@@ -115,38 +115,37 @@ const menuItems = [
         label: 'Enroll your Child',
         description: 'Forms, Emergency Contacts, Books.',
         icon: 'pi pi-id-card',
-        to: '/tuition-enrollment/enroll-your-child'
+        to: '/tuition-enrollment/enroll'
       },
       {
         label: 'Become a volunteer',
         description: 'Teens and Adults can sign up to volunteer.',
         icon: 'pi pi-users',
-        to: '/tuition-enrollment/become-a-volunteer'
+        to: '/tuition-enrollment/volunteer'
       },
       {
         label: 'Pay Monthly Tuition',
         description: 'Pay fees online via Paypal, Zelle, and Venmo.',
         icon: 'pi pi-wallet',
-        to: '/tuition-enrollment/pay-monthly-tuition'
+        to: '/tuition-enrollment/tuition'
       }
     ]
   },
   {
     label: 'Stay in Touch',
     icon: 'pi pi-comments',
-    to: '/stay-in-touch',
     children: [
       {
         label: 'Monthly Newsletter',
         description: 'Updates and Reminders about Sunday School activities.',
         icon: 'pi pi-envelope',
-        to: '/stay-in-touch/monthly-newsletter'
+        to: '/contact/newsletter'
       },
       {
         label: 'Contact Us',
         description: 'Leave questions and gain additional information',
         icon: 'pi pi-phone',
-        to: '/stay-in-touch/contact-us'
+        to: '/contact/contact-us'
       }
     ]
   },

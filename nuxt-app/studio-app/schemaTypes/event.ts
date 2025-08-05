@@ -24,11 +24,6 @@ export const eventType = defineType({
     dateFormat: 'YYYY-MM-DD',}
     }),
     defineField({
-      name: 'RSVP Form',
-    type: 'file',
-      validation: (rule) => rule.required(),      
-    }),
-    defineField({
       name: 'description',
       type: 'array',
       of: [{type: 'block'}],
