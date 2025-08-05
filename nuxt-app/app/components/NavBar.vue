@@ -1,21 +1,17 @@
 <template>
 <Menubar :model="menuItems" >
     <template #start>
-        <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-8">
-            <path d="..." fill="var(--p-primary-color)" />
-            <path d="..." fill="var(--p-text-color)" />
-        </svg>
-        
-
-    </template>
-    
+<span>
+  <img src=""/>
+</span>
+</template>    
 <template v-for="item in menuItems" #item="{ item, props, hasSubmenu, root }">
-        <a v-ripple class="flex items-center" v-bind="props.action">
+        <a v-ripple class=" ripple-box flex items-center" v-bind="props.action">
             <span >{{ item.label }}</span>
             <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
             <i v-if="hasSubmenu" :class="['pi pi-angle-down ml-auto', { 'pi-angle-down': root, 'pi-angle-right': !root }]">
-            <ul v-for="child in item.children">
-                <li><NuxtLink to="${{ child.to }}">${{ child.label }}</NuxtLink></li>
+            <ul v-if="item.children">
+                <li v-for="child in item.children"><NuxtLink :to="child.to">${{ child.label }}</NuxtLink></li>
             </ul>
             </i>
         </a>
@@ -25,6 +21,7 @@
 
 </template>
 <script setup lang="ts">
+
 import Menubar from 'primevue/menubar';
 
 const menuItems = [
