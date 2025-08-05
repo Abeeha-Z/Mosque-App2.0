@@ -30,3 +30,9 @@ export type PortableTextBlock = {
 
 export type SanityProse = PortableTextBlock[]
 
+export interface TimelineEvent {
+  name:string, 
+  date:string,
+  
+
+}

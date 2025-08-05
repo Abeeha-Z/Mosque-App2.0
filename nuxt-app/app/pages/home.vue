@@ -1,6 +1,6 @@
 <template>
 <NavBar/>
-s
+<h1 class="bg-red-500"> Testtesttesttest</h1>
   <div v-if="postObjects" class="post-container bg-blue-50 place-items-center">
     <div v-for="(postObject) in postObjects" :key="postObject._id" class="bg-white flex flex-wrap w-1/4 h-1/4 m-4 p-4 content-center drop-shadow-md drop-shadow-black">
             <h1>{{ postObject._title }}</h1>
@@ -12,15 +12,17 @@ s
       </div>
     </div>
     </div>
-</template>
+    <Button label="submit"></Button>
+</template>c
 
 <script setup lang='ts'>
+import 'primeicons/primeicons.css'
+import NavBar from '../components/NavBar.vue'
 import { ref, onMounted } from 'vue'
 import type { Post, SanityImage, SanityProse} from '../../types'
 import imageUrlBuilder from '@sanity/image-url'
 import {client} from '../../composables/useSanity'
-
-
+import { Button } from 'primevue'
 
 const postObjects = ref<Post[]>([])
 
