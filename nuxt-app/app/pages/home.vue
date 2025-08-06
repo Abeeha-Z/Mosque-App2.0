@@ -13,7 +13,7 @@
     </div>
     </div>
     <Button label="submit"></Button>
-</template>c
+</template>
 
 <script setup lang='ts'>
 import 'primeicons/primeicons.css'
@@ -53,7 +53,6 @@ return body
 onMounted(()=> {
   showPosts()
 })
-
 
   </script>
 
